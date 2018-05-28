@@ -51,5 +51,19 @@ class AbstractController {
        return $this->urlString;
     }
 
+    /**
+     * Get file data into variable, as if include had an output.
+     *
+     * @param   string      $filename
+     * @param   array       $vars       Variables to pass to file.
+     * @return  string
+     */
+    private function pullView(string $filename, array $vars = []): string
+    {
+        ob_start();
+        include_once(__DIR__ . "$filename.php");
+        return ob_get_clean();
+    }
+
 }
 
