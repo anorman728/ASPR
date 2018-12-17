@@ -12,6 +12,9 @@ $router = new Router($_SERVER['REDIRECT_URL'], $_SERVER['REQUEST_METHOD']);
 // There is nothing passed from the browser, so we'll use a GET instead of a POST.
 $router->get('/', 'App\SampleController', 'home');
 
+// This routes to a page that demonstrates use of templates.
+$router->get('/template-demo', 'App\SampleController', 'templateDemo');
+
 // This routes a POST request to the sample controller.  It won't work without a
 // POST request.
 $router->post('/postMethod', 'App\SampleController', 'postMethod');

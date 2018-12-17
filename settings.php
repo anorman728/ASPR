@@ -8,6 +8,7 @@
 
 $_SETTINGS = [
     'logfile' => __DIR__ . '/log',
+    'pagename' => 'ASPR Skeleton Webpage.',
 ];
 
 /**

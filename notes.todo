@@ -1,5 +1,9 @@
 + Settings
 + Logging function
     * Use settings to determine the log location.
-> Layouts
++ Layouts
+    * Slapped together.  This will probably be updated to make better.
+    * Documentation on this kind of stinks.  Oh, well.
 > PHPUnit
+> Tidy HTML output.
+    * Will want to make this a setting.  There's not much reason to do this in production and it'd just take extra time.

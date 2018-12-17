@@ -26,6 +26,33 @@ class SampleController extends AbstractController
     }
 
     /**
+     * Demonstration of using templates with a layout.
+     *
+     * @return  void
+     */
+    public function templateDemo()
+    {
+        $layoutVars = [
+            'page-heading' => 'ASPR Template and Layout Demonstration',
+        ];
+        $this->setLayoutVars($layoutVars);
+            // This sets variables to be used in the layout.  (You'd likely want
+            // to set this in a constructor, depending on the situation.)
+
+        // The layout itself can be changed by using the setLayout function.
+
+        $vars = ['demovar' => 'Templates'];
+            // This is referenced in the template_demo template.
+
+        $body = $this->pullView('/SampleView/template_demo', $vars);
+            // This pulls from App/SampleView/template_demo.php for the template.
+
+        $this->printToLayout($body);
+            // This places the values pulled from the template into the layout
+            // and prints the whole thing out.
+    }
+
+    /**
      * This is a sample POST method.
      *
      * @return  void

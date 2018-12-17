@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__ . '/appsettings.php');
+include_once(__DIR__ . '/settings.php');
 
 include_once(__DIR__ . '/commonfunctions.php');
 
