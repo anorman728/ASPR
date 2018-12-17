@@ -6,8 +6,8 @@ namespace App;
  *
  * @author  Andrew Norman
  */
-class SampleController extends AbstractController {
-
+class SampleController extends AbstractController
+{
     /**
      * This is a sample GET method.
      *
@@ -55,6 +55,23 @@ class SampleController extends AbstractController {
     public function usingAnArgument($arg)
     {
         print_r("It looks like you passed \"$arg\" into the URL bar.");
+    }
+
+    /**
+     * This action logs a value.
+     *
+     * @return  void
+     */
+    public function loggingSomething()
+    {
+        print_r("<p>This function uses the logIt function to add to the"
+        . " plaintext log in the root directory.  You can look into the log"
+        . " file in the root directory to see what's logged.</p>");
+        print_r("<p>This is useful for debugging.</p>");
+
+        // The logIt
+        $valueToLog = 'This is a logged value.';
+        logIt($valueToLog, 'logged value');
     }
 
 }

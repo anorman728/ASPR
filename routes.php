@@ -19,6 +19,9 @@ $router->post('/postMethod', 'App\SampleController', 'postMethod');
 // This routes an argument in the URL to the controller method.
 $router->get('/usingAnArgument/:arg', 'App\SampleController', 'usingAnArgument');
 
+// This routes to an action that logs something.
+$router->get('/loggingSomething', 'App\SampleController', 'loggingSomething');
+
 // These three examples should get you started.  In addition to "get" and
 // "post", you can use the "head", "put", and "delete" http methods.
 
