@@ -4,6 +4,12 @@
 + Layouts
     * Slapped together.  This will probably be updated to make better.
     * Documentation on this kind of stinks.  Oh, well.
-> PHPUnit
++ PHPUnit
+    * phpunit.xml is set up.  (Documentation for phpunit used to be good.  I don't know why they changed it.)
+    + Add a "Lib" directory.
+    + Add a dummy class to the lib directory.
+    + Add a test for dummy class.
+    + Add a trait for testing controllers.
+    + Add a test for testing controller.
 > Tidy HTML output.
     * Will want to make this a setting.  There's not much reason to do this in production and it'd just take extra time.

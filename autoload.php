@@ -3,9 +3,18 @@
 spl_autoload_register('default_autoload');
 
 function default_autoload ($classname) {
-    // if the class where already loaded. should not happen
+    // If the class were already loaded.  Should not happen.
     if (class_exists($classname)) {
         return true;
+    }
+
+    // Replace 'App' with 'src'.
+    if (substr($classname, 0, 3) == 'App') {
+        $classname = 'src' . substr($classname, 3);
+    }
+    // Replace 'Test' with 'tests'
+    if (substr($classname, 0, 4) == 'Test') {
+        $classname = 'tests' . substr($classname, 4);
     }
 
     // Works for PEAR style class names and namespaced class names
@@ -22,3 +31,5 @@ function default_autoload ($classname) {
 
     return false;
 }
+
+include_once(__DIR__ . '/vendor/autoload.php');

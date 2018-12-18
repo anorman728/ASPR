@@ -12,3 +12,5 @@ Documentation is sparse right now, but you can find in-code explanations here an
 One thing that's very important is that url rewriting *must* be enabled for routing to work.  This can be a pain because there are a few "gotchas" along the way, depending on the server you're using.  I'd suggest looking up how to enable url rewriting for whatever server software you're using.  The .htaccess file provided here defines rewrite rule as server.php, which loads autoload.php and routes.php.
 
 This is currently not available in Composer.  I made this only to help in my own projects, and, unless it becomes surprisingly popular, I don't intend to submit it to composer.
+
+To use the PHPUnit skeleton, you'll need to update composer.
