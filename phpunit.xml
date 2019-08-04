@@ -1,4 +1,4 @@
 <phpunit
-    bootstrap="phpunit_bootstrap.php"
+    bootstrap="phpunit_server.php"
 >
 </phpunit>
