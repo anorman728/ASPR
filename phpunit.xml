@@ -1,4 +1,4 @@
 <phpunit
-    bootstrap="autoload.php"
+    bootstrap="phpunit_bootstrap.php"
 >
 </phpunit>

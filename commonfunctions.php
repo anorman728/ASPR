@@ -1,13 +1,13 @@
 <?php
 
 /**
- * This script is loaded before everything except appsettings.php, including
+ * This script is loaded before everything except settings.php, including
  * autoload.php.  It adds useful functions, but should be added to sparingly to
  * avoid polluting the global namespace.
  */
 
 /**
- * Log a value to the logfile (the path of which is defined in appsettings.php.
+ * Log a value to the logfile (the path of which is defined in settings.php).
  *
  * @param   variant     $value
  * @param   string|null $name   Optional.  Won't print it if there isn't one.
