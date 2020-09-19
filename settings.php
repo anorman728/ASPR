@@ -7,6 +7,12 @@
  * or array.
  */
 
+global $_SETTINGS;
+global $_TEST_SETTINGS;
+
+include_once(__DIR__ . '/unversioned_settings.php');
+// Can now reference $unversioned_settings to put into $_SETTINGS.
+
 $_SETTINGS = [
     'logfile' => __DIR__ . '/log',
     'pagename' => 'ASPR Skeleton Webpage.',

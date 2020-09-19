@@ -1,8 +1,8 @@
 <?php
+// Everything needed for phpunit bootstrapping.
+
 // Almost never add anything to GLOBALS.
 $GLOBALS['isTest'] = true;
-
-// Everything needed for phpunit bootstrapping.
 
 include_once(__DIR__ . '/settings.php');
 
