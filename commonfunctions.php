@@ -42,5 +42,5 @@ function logIt_Print(string $value, bool $indent = true) {
     if ($indent) {
         $value = '    ' . $value;
     }
-    file_put_contents(getSetting('logfile'), "\n" . $value, FILE_APPEND);
+    file_put_contents(getSetting('logfile'), $value . PHP_EOL, FILE_APPEND);
 }
