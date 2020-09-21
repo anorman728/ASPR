@@ -1,4 +1,6 @@
 <phpunit
     bootstrap="phpunit_server.php"
+    colors="true"
+    strict="true"
 >
 </phpunit>
