@@ -2,6 +2,7 @@
 
 // Namespaces are handled by autoload.php.
 use Router\Router;
+use Router\NotFoundException;
 
 // It's unlikely that you'll want to change this.
 $router = new Router($_SERVER['REDIRECT_URL'], $_SERVER['REQUEST_METHOD']);
@@ -40,10 +41,13 @@ $router->get('/loggingSomething', 'App\SampleController', 'loggingSomething');
 
 try {
     $router->routeMe();
+} catch (NotFoundException $e) {
+    http_response_code(404);
+    print_r("Requested route was not found." . PHP_EOL);
 } catch (\Throwable $t) {
     // We can put any failure logic here that we like.  In this case, I'll just
     // print out the exception so I can see it.
     print_r("<pre>");
     print_r($t);
-    print_r("</pre>");
+    print_r("</pre>" . PHP_EOL);
 }

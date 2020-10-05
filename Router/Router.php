@@ -300,7 +300,7 @@ class Router {
     public function routeMe()
     {
         if (is_null($this->getRoute())) {
-            throw new \Exception("Route not found: {$this->getUrlRequest()} using {$this->getMethod()}.");
+            throw new NotFoundException("Route not found: {$this->getUrlRequest()} using {$this->getMethod()}.");
         }
 
         $this->getRoute()->invoke($this->getUrlRequest());
