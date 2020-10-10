@@ -107,7 +107,7 @@ class AbstractController {
     protected function pullView(string $filename, array $vars = []): string
     {
         ob_start();
-        include_once(__DIR__ . "$filename.php");
+        require(__DIR__ . "$filename.php");
         return ob_get_clean();
     }
 
