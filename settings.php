@@ -18,10 +18,14 @@ $_SETTINGS = [
     'pagename' => 'ASPR Skeleton Webpage.',
 ];
 
+$_SETTINGS = array_merge($unversioned_settings, $_SETTINGS);
+
 // In some very rare instances, want to use different settings for tests.
 $_TEST_SETTINGS = [
     'pagename' => 'ASPR Test Webpage.',
 ];
+
+$_TEST_SETTINGS = array_merge($unversioned_test_settings, $_TEST_SETTINGS);
 
 /**
  * The function that retrieves the global settings.

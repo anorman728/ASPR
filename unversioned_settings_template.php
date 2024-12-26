@@ -12,3 +12,5 @@ $unversioned_settings = [
         'password' => 'password123',
     ],
 ];
+
+$unversioned_test_settings = [];
