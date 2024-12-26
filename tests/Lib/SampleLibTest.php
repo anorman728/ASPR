@@ -14,7 +14,6 @@ class SampleLibTest extends TestCase
     /**
      * Test the addSample function.
      *
-     * @covers  App\Lib\SampleLib::addSample
      * @return  void
      */
     public function testAddSample()

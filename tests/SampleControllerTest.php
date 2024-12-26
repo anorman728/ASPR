@@ -30,7 +30,6 @@ class SampleControllerTest extends TestCase
     /**
      * This is an example testing the home action.
      *
-     * @covers  App\SampleController::home
      * @return  void
      */
     public function testHome()
@@ -49,7 +48,6 @@ class SampleControllerTest extends TestCase
     /**
      * This is an example testing an action with an argument.
      *
-     * @covers  App\SampleController::usingAnArgument
      * @return  void
      */
     public function testUsingAnArgument()
