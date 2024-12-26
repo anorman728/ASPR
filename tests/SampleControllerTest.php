@@ -22,7 +22,7 @@ class SampleControllerTest extends TestCase
      *
      * @return  void
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->sampleController = new SampleController();
     }
