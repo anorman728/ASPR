@@ -38,7 +38,7 @@ class SampleControllerTest extends TestCase
         // string.
         $html = $this->getHtml($this->sampleController, 'home');
 
-        $this->assertRegexp(
+        $this->assertMatchesRegularExpression(
             '/include_once.*View/s', // I keep forgetting that stupid "s" flag.
             $html,
             'Asserting that some values are found in the html.'
@@ -59,7 +59,7 @@ class SampleControllerTest extends TestCase
             ['my argument']
         );
 
-        $this->assertContains(
+        $this->assertStringContainsString(
             'you passed "my argument"',
             $html,
             'Asserting that argument is returned in page html.'
